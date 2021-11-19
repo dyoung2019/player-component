@@ -2,73 +2,38 @@
   "name": "@dotlottie/player-component",
   "version": "1.0.4",
   "description": "dotlottie animation player web component.",
-  "main": "dist/dotlottie-player.js",
-  "module": "dist/dotlottie-player.esm.js",
-  "types": "dist/dotlottie-player.esm.d.ts",
-  "homepage": "https://dotlottie.com/players",
-  "repository": "https://github.com/dotlottie/player-component.git",
-  "bugs": "https://github.com/dotlottie/player-component/issues",
   "author": "Jawish Hameed <jawish@lottiefiles.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build-dotlottie",
-    "build-dotlottie": "npm run cleanup && rollup -c",
-    "build:types": "tsc --declaration",
-    "start": "npm run cleanup && rollup -c --watch",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
-    "cleanup": "shx rm -rf dist && shx mkdir dist"
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "format": "prettier --write \"src/**/*.{ts,js}\"",
+    "lint": "prettier --check \"src/**/*.{ts,js}\""
   },
   "dependencies": {
-    "jszip": "^3.5.0",
-    "lit-element": "^2.3.1",
-    "lottie-web": "^5.7.8"
+    "@vanilla-extract/css": "^1.6.3",
+    "jszip": "^3.7.1",
+    "lottie-web": "^5.8.1",
+    "solid-js": "^1.2.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.0",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-proposal-decorators": "^7.10.5",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-typescript": "^7.10.4",
-    "@rollup/plugin-babel": "^5.1.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.4.0",
-    "@types/jszip": "^3.4.1",
-    "@typescript-eslint/eslint-plugin": "^2.6.1",
-    "@typescript-eslint/parser": "^2.6.1",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "lerna": "^4.0.0",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "1.18.2",
-    "rollup": "^2.23.0",
-    "rollup-plugin-alias": "^2.2.0",
-    "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-filesize": "^9.0.2",
-    "rollup-plugin-node-globals": "^1.4.0",
-    "rollup-plugin-serve": "^1.0.3",
-    "rollup-plugin-terser": "^6.1.0",
-    "rollup-plugin-typescript2": "^0.27.1",
-    "rollup-plugin-visualizer": "^4.0.4",
-    "shx": "^0.3.3",
-    "typescript": "^3.7.5"
+    "@babel/core": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@snowpack/plugin-babel": "^2.1.7",
+    "@snowpack/plugin-postcss": "^1.4.3",
+    "@snowpack/plugin-typescript": "^1.2.1",
+    "@types/snowpack-env": "^2.3.4",
+    "@vanilla-extract/snowpack-plugin": "^2.0.1",
+    "babel-preset-solid": "^1.2.3",
+    "prettier": "^2.4.1",
+    "snowpack": "^3.8.8",
+    "typescript": "^4.5.2"
   },
-  "files": [
-    "dist/dotlottie-player.js",
-    "dist/dotlottie-player.js.map",
-    "dist/dotlottie-player.esm.js",
-    "dist/dotlottie-player.esm.js.map",
-    "dist/dotlottie-player.d.ts",
-    "dist/dotlottie-player.styles.d.ts",
-    "dist/dotlottie-player.styles.d.map"
-  ],
   "keywords": [
     "dotlottie",
     "animation",
     "web component",
     "component",
-    "lit-element",
     "player"
   ],
   "browserslist": [
@@ -76,5 +41,12 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-typescript",
+      "solid"
+    ],
+    "plugins": []
   }
 }
