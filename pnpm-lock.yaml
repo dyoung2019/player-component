@@ -8,6 +8,7 @@ specifiers:
   '@snowpack/plugin-typescript': ^1.2.1
   '@types/snowpack-env': ^2.3.4
   '@vanilla-extract/css': ^1.6.3
+  '@vanilla-extract/dynamic': ^2.0.0
   '@vanilla-extract/snowpack-plugin': ^2.0.1
   babel-preset-solid: ^1.2.3
   jszip: ^3.7.1
@@ -19,6 +20,7 @@ specifiers:
 
 dependencies:
   '@vanilla-extract/css': 1.6.3
+  '@vanilla-extract/dynamic': 2.0.0
   jszip: 3.7.1
   lottie-web: 5.8.1
   solid-js: 1.2.4
@@ -651,6 +653,12 @@ packages:
       deep-object-diff: 1.1.0
       deepmerge: 4.2.2
       outdent: 0.8.0
+
+  /@vanilla-extract/dynamic/2.0.0:
+    resolution: {integrity: sha512-w24BI/NhxZ7KxKRTIkZVZA/V2BNgmZ9ocDTbqZ8+kLfEobejwS60aFkeBu/11upEc4PhmFE1v27v5M8zcaGA6Q==}
+    dependencies:
+      '@vanilla-extract/private': 1.0.1
+    dev: false
 
   /@vanilla-extract/integration/1.4.3:
     resolution: {integrity: sha512-Jax0lADpx8LYwwOyiob9+koGm3H4xSMkWOD+pGTeI87YquALUcp9tqlhZOSPX3X5Jdlpyw2Gxxmo6wa47UEWHA==}

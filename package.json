@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.6.3",
+    "@vanilla-extract/dynamic": "^2.0.0",
     "jszip": "^3.7.1",
     "lottie-web": "^5.8.1",
     "solid-js": "^1.2.3"

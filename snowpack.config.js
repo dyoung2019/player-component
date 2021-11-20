@@ -20,9 +20,9 @@
     out: 'dist',
   },
   plugins: [
-    '@snowpack/plugin-typescript',
+    "@vanilla-extract/snowpack-plugin",
     '@snowpack/plugin-babel',
-    ["@vanilla-extract/snowpack-plugin"]
+    '@snowpack/plugin-typescript',
   ],
   optimize: {
     bundle: true,
