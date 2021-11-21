@@ -10,6 +10,12 @@ export const [playerTheme, vars] = createTheme({
       active: '#555',
     }
   },
+  seeker: {
+    colors: {
+      track: '#CCC',
+      thumb: 'rgba(0, 107, 120, 0.8)'
+    }
+  }
 });
 
 export const mainStyle = style({

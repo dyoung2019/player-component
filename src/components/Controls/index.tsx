@@ -1,6 +1,7 @@
 import { mergeProps } from "solid-js";
 import { classify } from "./style";
 import ToolbarButton from "../ToolbarButton";
+import Seeker from "../Seeker";
 import { Stop, Loop, Pause, Play } from './Icons';
 
 export default function (props: any) {
@@ -28,14 +29,7 @@ export default function (props: any) {
         active={props.isStopped}>
         <Stop />
       </ToolbarButton>
-      <input
-        class="seeker"
-        type="range"
-        min="0"
-        step="1"
-        max="100"
-        value={props.seeker}
-      />
+      <Seeker />
       <ToolbarButton 
         onClicked={togglePlay}
         active={props.loop}>
