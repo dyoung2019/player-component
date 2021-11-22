@@ -17,7 +17,6 @@ export default function (props: {
 
   return (
     <div class={animationStyle} style={customize(props.background)}>
-      dfdf
       <Show when={props.currentState === PlayerState.Error}>
         <div class={errorStyle}>⚠</div>
       </Show>
