@@ -1,13 +1,16 @@
+import { createSignal } from "solid-js";
 import DotLottiePlayer from "./components/Player";
-import PlayerError from "./components/Player/PlayerError";
 import { PlayerState } from "./components/Player/PlayerState";
 
 export function App() {
+  const [currentState, setCurrentState] = createSignal(PlayerState.Loading);
+
   return (
     <DotLottiePlayer 
       background="red" 
       controls={true} 
-      currentState={PlayerState.Error} 
+      currentState={currentState()}
+      setCurrentState={setCurrentState} 
     />
   );
 }
